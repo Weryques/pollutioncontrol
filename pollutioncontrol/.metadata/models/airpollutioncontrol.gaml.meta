@@ -1,5 +1,5 @@
 #
-#Fri Dec 09 11:32:54 BRST 2016
+#Fri Dec 16 11:43:28 BRST 2016
 operators=-~?~\:~as~+~envelope~rnd~flip~>\=~length~internal_at~direction_to~last~.~abs~or~and~>~<~not~in~circle~box~sphere~point~rgb~\=~*~cos~sin~/~one_of~where~\!\=~mod~min~square~triangle~read~max~polyline~reverse~as_map~\:\:~with_weights~as_driving_graph~empty
 plugins=msi.gama.core~simtools.gaml.extensions.traffic~ummisco.gama.opengl
 attributes=points~location~x~y~shape~perimeter
