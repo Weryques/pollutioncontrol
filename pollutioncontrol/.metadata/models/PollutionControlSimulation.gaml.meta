@@ -1,10 +1,10 @@
 #
-#Sat Dec 17 20:14:21 BRST 2016
-operators=-~as~envelope~/~*~rnd~+~>\=~?~empty~internal_at~\:~box~sphere~point~rnd_color~.~\=~cos~sin~one_of~\!\=~min~triangle~read~where~flip~polyline~reverse~as_map~\:\:~with_weights~as_driving_graph
+#Wed Dec 21 16:00:31 BRST 2016
+operators=-~as~envelope~/~*~rnd~+~>\=~?~empty~internal_at~\:~box~sphere~point~rnd_color~.~\=~cos~sin~one_of~\!\=~and~<\=~>~min~triangle~read~where~flip~polyline~reverse~as_map~\:\:~with_weights~as_driving_graph
 plugins=msi.gama.core~simtools.gaml.extensions.traffic~ummisco.gama.opengl
 attributes=x~y~segments~perimeter~shape~points~location
 statements=reflex~set~if~put~aspect~draw~action~let~else~return~do~loop~init~create~arg~ask~add~switch~match~output~display~display_population~chart~data
 skills=reflex~skill_road_node~skill_road~advanced_driving
-constants=km~h~green~red~gray~m~blue~black~gold~goldenrod~darkorange
+constants=km~h~green~red~gray~m~blue~darkslategray~black~goldenrod~darkorange
 types=string~point~agent~list~int~rgb~float~bool~date~file~geometry~graph~container~unknown~map~path
 actions=debug~pause~halt~_init_~tell~error~_step_~die~write~unregister~register~follow~lane_choice~external_factor_impact~wander~test_next_road~advanced_follow_driving~drive~move~path_from_nodes~compute_path~is_ready_next_road~speed_choice~goto
