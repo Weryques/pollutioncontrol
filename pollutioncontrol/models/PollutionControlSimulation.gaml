@@ -24,7 +24,7 @@ model PollutionControlSimulation
  */
 
 global {   
-	file shape_file_roads  <- file("../includes/roads.shp") ;
+	file shape_file_roads  <- file("../includes/roads.shp");
 	file shape_file_nodes  <- file("../includes/nodes.shp");
 	geometry shape <- envelope(shape_file_roads);
 	
@@ -83,14 +83,14 @@ global {
 		}
 	}
 	
-	reflex end when: cycle = 210 {
+	reflex end when: cycle = 420 {
 		do pause;
 	}
 } 
 species semaphore skills: [skill_road_node] {
 	bool is_traffic_signal;
-	int time_to_change <- 100; // segundos
-	int counter <- rnd (time_to_change) ; //0 a 100s
+	int time_to_change <- 100;
+	int counter <- rnd (time_to_change); // 0 a 100
 	
 	reflex dynamic when: is_traffic_signal {
 		counter <- counter + 1;
@@ -183,7 +183,7 @@ species car skills: [advanced_driving] {
 }
 
 experiment pollution_control_simulation type: gui {
-	parameter "Número de carros:" var: nb_car category: "Carros" min: 2409;
+	parameter "Número de carros:" var: nb_car category: "Carros";
 	parameter "Velocidade mínima m/s:" var: speedm category: "Carros";
 	
 	float minimum_cycle_duration <- 0.2;
@@ -197,14 +197,14 @@ experiment pollution_control_simulation type: gui {
 		
 		display chart_pollution{
 			chart "Quilos de poluicão de todos os carros" type: histogram size:{0.5, 0.5} position:{0,0}{
-				data "Poluição dirigindo" value: pollution_coeff color: #red marker: false;
+				data "Poluição sem filtro" value: pollution_coeff color: #red marker: false;
 				data "Poluição parado sem filtro" value: pollution_stoped color: #blue marker: false;
-				data "Poluição com filtro" value: pollution_filter color: #darkslategray marker: false;
-				data "Máximo de poluição" value: 20 color: #gray marker: false;
+				data "Poluição com filtro" value: pollution_filter color: #teal marker: false;
+				data "Máximo de poluição" value: 10 color: #gray marker: false;
 			}
 			chart "Distância percorrida de todos os carros" type: series size:{0.5, 0.5} position:{0.5,0}{
 				data "Km percorridos" value: kilo color: #blue marker: false;
-				data "Distância Máxima" value: 5000 color: #black marker: false;
+				data "Distância Máxima" value: 10000 color: #black marker: false;
 			}
 			chart "Velocidade" type: series size:{1, 0.5} position:{0,0.5}{
 				data "Velocidade" value: speedex color:#goldenrod marker: false;
